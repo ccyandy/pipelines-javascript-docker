@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: ccyandypipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ccyandypipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: ccyandypipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: ccyandypipelinesjavascriptdocker 
+          image: uwalletacr.azurecr.io/ccyandypipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
